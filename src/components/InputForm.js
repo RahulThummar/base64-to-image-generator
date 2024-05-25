@@ -34,6 +34,7 @@ const InputForm = () => {
         <h2 className="mt-5">Base64 to Image converter</h2>
         <div className="input-container mt-3">
           <textarea
+            autoFocus
             rows={7}
             type="url"
             className="w-full border-2 py-1 px-3 text-gray-700 rounded-sm text-area"
