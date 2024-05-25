@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { InputContext } from "../App";
 
 const InputForm = () => {
-  const { getQrCode, inputValue, setInputValue } = useContext(InputContext);
+  const { inputValue, setInputValue } = useContext(InputContext);
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
@@ -12,8 +12,6 @@ const InputForm = () => {
   const handleOnChange = (e) => {
     setInputValue({ ...inputValue, url: e.target.value });
   };
-
-  const handleSubmit = () => getQrCode();
 
   const handleDownloadImage = () => {
     if (!inputValue.url) return;
@@ -25,10 +23,6 @@ const InputForm = () => {
     link.click();
     document.body.removeChild(link);
   };
-
-  useEffect(() => {
-    handleSubmit();
-  }, [inputValue.url, inputValue.color]);
 
   useEffect(() => {
     setImageUrl(inputValue.url);

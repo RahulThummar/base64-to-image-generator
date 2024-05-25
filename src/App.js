@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import InputForm from "./components/InputForm"; 
+import InputForm from "./components/InputForm";
 
 // Create context
 export const InputContext = createContext();
@@ -34,19 +34,9 @@ function App() {
   };
 
   return (
-    // <div>
-    //   <h2 className="mt-5">QR code generator</h2>
-    //   <div className="container">
-    //     <div className="main-content">
-    //       <div className="md:grid md:grid-cols-5">
-            <InputContext.Provider value={value}>
-              <InputForm />
-              {/* <QrCode /> */}
-            </InputContext.Provider>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+    <InputContext.Provider value={value}>
+      <InputForm />
+    </InputContext.Provider>
   );
 }
 
