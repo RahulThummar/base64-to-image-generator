@@ -114,6 +114,14 @@ p {
   /* border-radius: 8px; */
 }
 
+.text-area {
+  box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0.2);
+  background: #2d2d2d;
+  border: 0.5px solid #454545;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 768px) {
   .content-wrapper {
     margin-top: 20px;
