@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { InputContext } from "../App";
 
 const InputForm = () => {
-  const { inputValue, setInputValue } = useContext(InputContext);
+  const { getQrCode, inputValue, setInputValue } = useContext(InputContext);
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
@@ -12,6 +12,8 @@ const InputForm = () => {
   const handleOnChange = (e) => {
     setInputValue({ ...inputValue, url: e.target.value });
   };
+
+  const handleSubmit = () => getQrCode();
 
   const handleDownloadImage = () => {
     if (!inputValue.url) return;
@@ -25,26 +27,30 @@ const InputForm = () => {
   };
 
   useEffect(() => {
+    handleSubmit();
+  }, [inputValue.url, inputValue.color]);
+
+  useEffect(() => {
     setImageUrl(inputValue.url);
   }, [inputValue.url]);
 
   return (
     <div className="main-container">
       <div className="content-wrapper">
-        <h2 className="mt-5">Base64 to Image converter</h2>
+        <h2 className="mt-5 text-white">Base64 to Image generator</h2>
         <div className="input-container mt-3">
           <textarea
             autoFocus
             rows={7}
             type="url"
-            className="w-full border-2 py-1 px-3 text-gray-700 rounded-sm text-area"
+            className="w-full text-area"
             placeholder="Enter base64 url here..."
             value={inputValue.url}
             onChange={handleOnChange}
           />
         </div>
         <div className="container mt-5">
-          <div className="main-content relative">
+          <div className="main-content relative bg-gray-900 p-5">
             {imageUrl && (
               <div className="image-container relative group">
                 <img src={imageUrl} alt="Preview" className="preview-image" />
