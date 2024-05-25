@@ -40,9 +40,9 @@ const InputForm = () => {
     <div className="main-container">
       <div className="content-wrapper">
         <h2 className="mt-5">Base64 to Image generator</h2>
-        <div className="input-container">
+        <div className="input-container mt-3">
           <textarea
-            rows={5}
+            rows={7}
             type="url"
             className="w-full border-2 py-1 px-3 text-gray-700 rounded-sm"
             placeholder="Enter base64 url here..."
