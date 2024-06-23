@@ -12,7 +12,7 @@
 }
 
 html {
-  color: #ffffff;
+  color: #000000; /* Changed to black for light theme */
   scroll-behavior: smooth;
 }
 
@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1a1a1a;
+  background: #f0f0f0; /* Changed to light gray for light theme */
 }
 
 :focus {
@@ -40,7 +40,7 @@ body {
 }
 
 h2 {
-  color: #ffffff;
+  color: #000000; /* Changed to black for light theme */
   text-align: center;
   font-size: 3vw;
   letter-spacing: -0.2px;
@@ -52,7 +52,7 @@ p {
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: 6.25rem;
-  color: #cccccc;
+  color: #666666; /* Changed to dark gray for light theme */
   font-size: 1.2vw;
 }
 
@@ -62,9 +62,9 @@ p {
   min-height: 400px;
   padding: 18px;
   position: relative;
-  box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0.2);
-  background: #2d2d2d;
-  border: 0.5px solid #454545;
+  box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0);
+  background: #ffffff; /* Changed to white for light theme */
+  border: 0.5px solid #dddddd; /* Changed to light gray for light theme */
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -98,7 +98,7 @@ p {
 
 .download-button:hover {
   background-color: #2779bd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .download-button:disabled {
@@ -114,16 +114,16 @@ p {
   /* border-radius: 8px; */
 }
 
- .text-area {
-  box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0.2);
-  background: #2d2d2d;
-  border: 5px solid #454545;
+.text-area {
+  box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0);
+  background: #ffffff; /* Changed to white for light theme */
+  border: 5px solid #dddddd; /* Changed to light gray for light theme */
   border-radius: 16px;
-  color: #ffffff;
+  color: #000000; /* Changed to black for light theme */
   overflow-x: hidden;
   /* Custom scrollbar styles */
   scrollbar-width: thin;
-  scrollbar-color: #888 #2d2d2d;
+  scrollbar-color: #888 #ffffff; /* Changed scrollbar track to white */
 }
 
 /* For WebKit browsers */
@@ -132,19 +132,19 @@ p {
 }
 
 .text-area::-webkit-scrollbar-track {
-  background: #2d2d2d;
+  background: #ffffff; /* Changed scrollbar track to white */
 }
 
 .text-area::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 10px;
-  border: 2px solid #2d2d2d;
+  border: 2px solid #ffffff; /* Changed scrollbar thumb border to white */
 }
 
 /* For Firefox */
 .text-area {
   scrollbar-width: thin;
-  scrollbar-color: #888 #2d2d2d;
+  scrollbar-color: #888 #ffffff; /* Changed scrollbar track to white */
 }
 
 /* Optional: Hover effect */
