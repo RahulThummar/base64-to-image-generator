@@ -64,7 +64,7 @@ p {
   position: relative;
   box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0);
   background: #ffffff; /* Changed to white for light theme */
-  border: 0.5px solid #dddddd; /* Changed to light gray for light theme */
+  border: 5px solid #dddddd; /* Changed to light gray for light theme */
   border-radius: 16px;
   display: flex;
   justify-content: center;
