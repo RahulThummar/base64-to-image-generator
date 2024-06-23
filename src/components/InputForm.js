@@ -22,6 +22,11 @@ const InputForm = () => {
   const handleSubmit = () => {
     let value = userInput.trim();
 
+    // Remove surrounding quotes if present
+    if (value.startsWith('"') && value.endsWith('"')) {
+      value = value.slice(1, -1);
+    }
+
     // Check if the input already has a valid base64 prefix
     if (!value.startsWith("data:image")) {
       // Add prefix if it's missing
@@ -66,13 +71,11 @@ const InputForm = () => {
           <div className="main-content relative bg-gray-900 p-5">
             {isValidBase64 && (
               <div className="image-container relative group">
-                {inputValue.url.includes("/9j" || "iVBORw0KGgo" || "/9j") && (
-                  <img
-                    src={inputValue.url}
-                    alt="Preview"
-                    className="preview-image"
-                  />
-                )}
+                <img
+                  src={inputValue.url} // Use inputValue.url directly, already processed in handleSubmit
+                  alt="Preview"
+                  className="preview-image"
+                />
                 <button
                   onClick={handleDownloadImage}
                   className="download-button absolute top-0 right-0 bg-blue-400 px-4 py-2 text-white rounded-sm hover:bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
