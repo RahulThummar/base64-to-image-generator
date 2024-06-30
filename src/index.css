@@ -60,7 +60,7 @@ p {
   max-width: 80rem;
   width: 100%;
   min-height: 400px;
-  padding: 18px;
+  padding: 8px;
   position: relative;
   box-shadow: 0 12px 48px 0px rgba(0, 0, 0, 0);
   background: #ffffff; /* Changed to white for light theme */

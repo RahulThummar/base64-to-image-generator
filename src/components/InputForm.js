@@ -55,7 +55,7 @@ const InputForm = () => {
   return (
     <div className="main-container">
       <div className="content-wrapper">
-        <h2 className="mt-5">Base64 to Image Generator</h2>
+        <h2>Base64 to Image Generator</h2>
         <div className="input-container mt-3">
           <textarea
             autoFocus
