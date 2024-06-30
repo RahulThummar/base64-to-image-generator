@@ -71,11 +71,14 @@ const InputForm = () => {
           <div className="main-content relative bg-gray-900 p-5">
             {isValidBase64 && (
               <div className="image-container relative group">
-                <img
-                  src={inputValue.url} // Use inputValue.url directly, already processed in handleSubmit
-                  alt="Preview"
-                  className="preview-image"
-                />
+                {(inputValue.url.includes("/9j") ||
+                  inputValue.url.includes("iVBORw0KGgo")) && (
+                  <img
+                    src={inputValue.url} // Use inputValue.url directly, already processed in handleSubmit
+                    alt="Preview"
+                    className="preview-image"
+                  />
+                )}
                 <button
                   onClick={handleDownloadImage}
                   className="download-button absolute top-0 right-0 bg-blue-400 px-4 py-2 text-white rounded-sm hover:bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
