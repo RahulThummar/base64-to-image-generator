@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import Header from "./components/Header";
 import InputForm from "./components/InputForm";
 
 // Create context
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <InputContext.Provider value={value}>
+      {/* <Header /> */}
       <InputForm />
     </InputContext.Provider>
   );
