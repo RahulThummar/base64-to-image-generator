@@ -55,7 +55,7 @@ const InputForm = () => {
   return (
     <div className="main-container">
       <div className="content-wrapper">
-        <h2>Base64 to Image Generator</h2>
+        {/* <h2>Base64 to Image Generator</h2> */}
         <div className="input-container mt-3">
           <textarea
             autoFocus
@@ -74,7 +74,7 @@ const InputForm = () => {
                 {(inputValue.url.includes("/9j") ||
                   inputValue.url.includes("iVBORw0KGgo")) && (
                   <img
-                    src={inputValue.url} // Use inputValue.url directly, already processed in handleSubmit
+                    src={inputValue.url}
                     alt="Preview"
                     className="preview-image"
                   />
